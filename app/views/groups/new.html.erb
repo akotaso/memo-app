@@ -1,0 +1,21 @@
+<div class="create_group">
+  <h2>グループ作成</h2>
+  <%= form_for @group, id: 'new_group', class: 'new_group', local: true do |f| %>
+
+  <div class="group_form_name">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="group_form_member">
+  </div>
+
+  <div class="group_form_member-list">
+  </div>
+
+  <div class="actions"> 
+    <%= f.submit "登録" %>
+  </div>
+
+  <% end %>
+</div>
