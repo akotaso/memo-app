@@ -1,0 +1,14 @@
+<div class="group">
+  <div class="my_group">
+    <h2>グループ</h2>
+    <% current_user.groups.each do |group| %>
+    <%= group.name %>
+      メンバー：
+      <% group.users.each do |user|%>
+      <%= user.name %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="group_edit">
+  </div>
+</div>

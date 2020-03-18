@@ -8,6 +8,7 @@
   </div>
 
   <div class="group_form_member">
+    <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
   </div>
 
   <div class="group_form_member-list">
