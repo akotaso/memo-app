@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
     @item = Item.new
     @comments = Comment.all
     @comment = Comment.new
-    
+    redirect_to "/users/sign_up" unless user_signed_in?
   end
 
   def new
