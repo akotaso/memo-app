@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
     @item = Item.new
     @comments = Comment.all
     @comment = Comment.new
+    
   end
 
   def new

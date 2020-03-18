@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :index, only: :index
   resources :comments, only: [:index, :create]
   resources :omikuji, only: [:index, :create]
   resources :users, only: [:index, :show]
@@ -9,5 +10,5 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
 
-  root "items#show"
+  root "index#index"
 end

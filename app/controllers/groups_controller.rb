@@ -7,7 +7,8 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @group.users << current_user
+    redirect_to "/users/sign_up" unless user_signed_in?
+      
   end
 
   def create
