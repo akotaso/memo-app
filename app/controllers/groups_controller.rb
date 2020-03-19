@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
-    
+    redirect_to "/users/sign_up" unless user_signed_in?
   end
 
   def new
