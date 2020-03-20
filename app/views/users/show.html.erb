@@ -1,12 +1,21 @@
 <div class="user">
   <div class="user_info">
-    <% if user_signed_in?%>
-      こんにちは<%= current_user.name%>さん<br>
-       ログアウトは<%= link_to "コチラ", destroy_user_session_path, method: :delete %>
+    <% if user_signed_in? %>
+      <div class="userName">
+      こんにちは<%= current_user.name %>さん<br>
+      </div>
+      <div class="other_login">
+      ログアウトは<%= link_to "コチラ", destroy_user_session_path, method: :delete %>
+      </div>
     <% else %>
-      こんにちはゲストさん<br>
-      新規登録は<a href="/users/sign_up">コチラ</a><br>
-      ログインは<a href="/users/sign_in">コチラ</a>
+      <div class="userName">
+      ようこそゲストさん<br>
+      </div>
+      <p>EasyTagの機能を使うためにまずはユーザー登録をしましょう！</p><br>
+      <div class="signUp">
+      <a href="/users/sign_up", class="other_login"><u><p>新規登録はコチラ</p></u></a><br>
+      <a href="/users/sign_in", class="other_login"><u><p>ログインはコチラ</p></u></a>
+      </div>
     <% end %>
   </div>
 </div>
