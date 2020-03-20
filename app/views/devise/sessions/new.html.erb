@@ -1,16 +1,16 @@
 <div class="contents row">
   <div class="container">
-    <h2>Log in</h2>
+    <h2>ログイン</h2>
 
     <%= form_for (@user), url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, placeholder: "メールアドレスを入力してください",autofocus: true %>
       </div>
 
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, placeholder: "パスワードを入力してください",autocomplete: "off" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -21,10 +21,10 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "ログイン" %>
       </div>
     <% end %>
-    <a href="/users/sign_up"><p>新規登録はこちら</p></a>
+    <a href="/users/sign_up", class="other_login"><p>新規登録はこちら</p></a>
 
   </div>
 </div>

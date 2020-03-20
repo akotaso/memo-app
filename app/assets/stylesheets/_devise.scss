@@ -1,0 +1,50 @@
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  padding: 50px 0 30px 0;
+}
+
+.container input {
+  margin-bottom: 30px;
+}
+
+.field {
+  font-size: 16px;
+}
+
+#user_name {
+  width: 380px;
+  height: 38px;
+}
+
+#user_email {
+  width: 380px;
+  height: 38px;
+}
+
+#user_password {
+  width: 380px;
+  height: 38px;
+}
+
+#user_password_confirmation {
+  width: 380px;
+  height: 38px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.other_login {
+  color: #A52A2A;
+  font-weight: bold;
+  text-align: center;
+}
