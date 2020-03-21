@@ -2,11 +2,13 @@
   <div class="my_group">
     <h2>グループ</h2>
     <% current_user.groups.each do |group| %>
-    <%= group.name %>
-      メンバー：
+    <div class="group_list">
+    <a href="", class="group_name"><%= group.name %></a>
+      <p class="group_member">メンバー：</p>
       <% group.users.each do |user|%>
       <%= user.name %>
       <% end %>
+    </div><br>
     <% end %>
   </div>
 
