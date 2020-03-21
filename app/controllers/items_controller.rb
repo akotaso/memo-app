@@ -1,8 +1,11 @@
 class ItemsController < ApplicationController
+  before_action :set_group
+
   def index
     @items = Item.all
     @item = Item.new
-    @comments = Comment.all
+    @comments = @group.comments.includes(:user)
+    # @comments = Comment.all
     @comment = Comment.new
     redirect_to "/users/sign_up" unless user_signed_in?
   end
@@ -30,6 +33,10 @@ class ItemsController < ApplicationController
   private
   def item_params
     params.require(:item).permit(:name).merge(user_id: current_user.id)
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
   end
 
 end
