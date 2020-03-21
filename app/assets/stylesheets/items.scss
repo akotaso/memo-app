@@ -1,3 +1,20 @@
+.list {
+  height: calc(100vh - 114px);
+  width: 70%;
+}
+
+.list_area {
+  height: 90%;
+  width: 100%;
+}
+
+.list_area_imput-form {
+  background-color: #FAEBD7;
+  height: calc(100% - 90%);
+  line-height: 60px;
+  text-align: center;
+}
+
 .about {
   height: 675px;
   text-align: center;

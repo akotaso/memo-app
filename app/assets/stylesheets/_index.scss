@@ -76,43 +76,6 @@
   height: 675px;
 }
 
-.list {
-  height: calc(100vh - 114px);
-  width: 70%;
-}
-
-.list_area {
-  height: 90%;
-  width: 100%;
-}
-
-.list_area_imput-form {
-  background-color: #FAEBD7;
-  height: calc(100% - 90%);
-  line-height: 60px;
-  text-align: center;
-}
-
-
-.comment {
-  height: calc(100vh - 114px);
-  width: calc(100% - 70%);
-  float: right;
-}
-
-.group_area {
-  height: 10%;
-}
-
-.comment_area {
-  height: 75%;
-  background-color: green;
-}
-.comment_area_message-form {
-  height: 15%;
-  background-color: purple;
-}
-
 .footer {
   background-color: #A52A2A;
   height: 30px;

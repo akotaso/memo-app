@@ -4,8 +4,8 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     @item = Item.new
-    @comments = @group.comments.includes(:user)
-    # @comments = Comment.all
+    # @comments = @group.comments.includes(:user)
+    @comments = Comment.all
     @comment = Comment.new
     redirect_to "/users/sign_up" unless user_signed_in?
   end
@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
   end
 
   def set_group
-    @group = Group.find(params[:id])
+    # @group = Group.find(params[:id])
   end
 
 end
