@@ -15,12 +15,25 @@
 
 .comment_area {
   height: calc(100% - 20%);
-  background-color: green;
+}
+
+.comment_area_box {
+  margin: 0 10px 0 10px;
+}
+
+.comment_area_box_comment{
+  padding: 10px 10px 10px 10px;
+  border-bottom: dotted 1px rgb(202, 183, 183);
 }
 
 .comment_area_message-form {
+  background-color: #FAEBD7;
   height: calc( 100% - 90%);
-  background-color: purple;
+}
+
+.comment_form {
+  margin-top: 20px;
+  margin-left: 80px;
 }
 
 .group_area_list {

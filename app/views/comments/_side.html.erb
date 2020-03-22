@@ -13,14 +13,18 @@
       </div>
 
       <div class="comment_area">
+        <div class="comment_area_box">
         <% @comments.each do |comment| %>
-          <%= comment.content %><br>
+          <div class="comment_area_box_comment">
+          <%= comment.content %><div class="comment_user">あっこ</div><br>
+          </div>
         <% end %>
+        </div>
       </div>
 
       <div class="comment_area_message-form">
         <%= form_for(@comment) do |f| %>
-          <%= f.text_field :content, class:"", size:30, placeholder:"メッセージ" %>
+          <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
           <%= f.submit "送信" %>
         <% end %>
       </div>
