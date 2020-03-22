@@ -3,7 +3,11 @@
     <h2>グループ</h2>
     <% current_user.groups.each do |group| %>
     <div class="group_list">
-    <a href="", class="group_name"><%= group.name %></a>
+      <div class="group_name">
+        <%= link_to group_comments_path(group) do %>
+        <%= group.name %>
+        <% end %>
+      </div>
       <p class="group_member">メンバー：</p>
       <% group.users.each do |user|%>
       <%= user.name %>
