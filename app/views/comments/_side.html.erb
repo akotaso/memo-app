@@ -4,9 +4,9 @@
           <h2>グループ：</h2>
           <% current_user.groups.each do |group| %>
           <div class="group_area_list">
-            <ul>
-              <li><a href="", class="group_area_name"><%= group.name %></a></li>
-            </ul>
+            <%= link_to group_comments_path(group) do %>
+              <div class="group_area_name"><%= group.name %></div>
+            <% end %>
           <% end %>
           </div>
         </div>
@@ -14,18 +14,21 @@
 
       <div class="comment_area">
         <div class="comment_area_box">
-        <% @comments.each do |comment| %>
-          <div class="comment_area_box_comment">
-          <%= comment.content %><div class="comment_user">あっこ</div><br>
-          </div>
-        <% end %>
+          
+        <%= render @comments %>
+
+        <%# <% @comments.each do |comment| %>
+          <%# <div class="comment_area_box_comment"> %>
+          <%# <%= comment.content %>
+          <%# </div> %>
+        <%# <% end %>
         </div>
       </div>
 
       <div class="comment_area_message-form">
-        <%= form_for(@comment) do |f| %>
-          <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
-          <%= f.submit "送信" %>
-        <% end %>
+        <%# <%= form_for(@group, @comment) do |f| %>
+          <%# <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
+          <%# <%= f.submit "送信" %>
+        <%# <% end %> 
       </div>
   </div>
