@@ -1,6 +1,7 @@
 .list {
   height: calc(100vh - 114px);
-  width: 70%;
+  width: calc(100% - 30%);
+
 }
 
 .list_area {
@@ -13,15 +14,6 @@
   height: calc(100% - 90%);
   line-height: 60px;
   text-align: center;
-}
-
-.about {
-  height: 675px;
-  text-align: center;
-}
-
-.about a {
-  color: #A52A2A;
 }
 
 h1 {

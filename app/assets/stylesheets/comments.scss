@@ -1,22 +1,38 @@
 .comment {
-  height: calc(100vh - 114px);
-  width: calc(100% - 70%);
-  float: right;
+  height: 100%;
+  width: 100%;
+  display: flex;
 }
 
 .group_area {
+  height: calc(100vh - 114px);
+  width: 30%;
+}
+
+.group_area_content {
   height: 10%;
 }
 
 .comment_area {
-  height: 75%;
+  height: calc(100% - 20%);
   background-color: green;
 }
+
 .comment_area_message-form {
-  height: 15%;
+  height: calc( 100% - 90%);
   background-color: purple;
 }
 
 .group_area_list {
   display: flex;
+}
+
+.group_area_name {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #A52A2A;
+  margin-left: 10px;
+  padding-right: 15px;
+  text-shadow: 1px 1px 1px pink;
 }

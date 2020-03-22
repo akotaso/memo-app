@@ -13,6 +13,10 @@
   display: flex;
 }
 
+.content_area {
+  height: calc(100vh - 114px);
+}
+
 .header {
   height: 30px;;
 }
@@ -72,10 +76,6 @@
   transform: translateY(0);
 }
 
-.content_area {
-  height: 675px;
-}
-
 .footer {
   background-color: #A52A2A;
   height: 30px;
@@ -85,4 +85,13 @@
   color: white;
   text-align: center;
   line-height: 30px;
+}
+
+.about {
+  height: 100vh;
+  text-align: center;
+}
+
+.about a {
+  color: #A52A2A;
 }
