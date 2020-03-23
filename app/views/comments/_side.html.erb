@@ -15,20 +15,21 @@
       <div class="comment_area">
         <div class="comment_area_box">
           
-        <%= render @comments %>
+        <%# <%= render @comment  %> 
+        <%= render partial: 'comment',locals: { comment: @comment }, collection: @comments %>
 
-        <%# <% @comments.each do |comment| %>
-          <%# <div class="comment_area_box_comment"> %>
-          <%# <%= comment.content %>
-          <%# </div> %>
-        <%# <% end %>
+          <%# <% @comments.each do |comment| %>
+            <%# <div class="comment_area_box_comment"> %>
+            <%# <%= comment.content %>
+            <%# </div> %>
+          <%# <% end %>
         </div>
       </div>
 
       <div class="comment_area_message-form">
-        <%# <%= form_for(@group, @comment) do |f| %>
-          <%# <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
-          <%# <%= f.submit "送信" %>
-        <%# <% end %> 
+        <%= form_for [@group,@comment], url: group_comments_path do |f| %>
+          <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
+          <%= f.submit "送信" %>
+        <% end %>
       </div>
   </div>

@@ -4,12 +4,14 @@ class CommentsController < ApplicationController
   def index
     @comment = Comment.new
     @comments = @group.comments.includes(:user)
+    @item = Item.new
+    @items = @group.items.includes(:user)
   end
 
   def create
     @comment = @group.comments.new(comment_params)
     @comment.save
-    redirect_to "/items"
+    redirect_to group_comments_path(group)
   end
 
   private
@@ -20,5 +22,6 @@ class CommentsController < ApplicationController
   def set_group
     @group = Group.find(params[:group_id])
   end
+
 
 end
