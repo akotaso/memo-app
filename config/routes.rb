@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :groups, only: [:index, :new, :create, :edit, :update] do
     resources :comments, only: [:index, :create]
+    resources :items, only: [:index, :new, :create, :destroy, :show] do
+      resources :likes, only: [:create, :destroy]
+    end
   end
-  resources :items, only: [:index, :new, :create, :destroy, :show] do
-    resources :likes, only: [:create, :destroy]
-  end
+  
 
   root "index#index"
 end

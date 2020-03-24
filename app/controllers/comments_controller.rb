@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @group.comments.new(comment_params)
     @comment.save
-    redirect_to group_comments_path(group)
+    redirect_to group_comments_path(@group)
   end
 
   private

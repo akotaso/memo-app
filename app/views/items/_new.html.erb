@@ -6,11 +6,11 @@
             <div class="list_area_item-list">
 
               <% if current_user.already_liked?(item) %>
-                <%= link_to item_like_path(item_id: item.id, id: item.likes.find_by(user_id: current_user.id)), method: :delete do %>
+                <%= link_to group_item_like_path(item_id: item.id, id: item.likes.find_by(user_id: current_user.id)), method: :delete do %>
                   <button class="item_button"><%= item.name %></button>
                 <% end %>
               <% else %>
-                <%= link_to item_likes_path(item_id: item.id), method: :post do %>
+                <%= link_to group_item_likes_path(item_id: item.id), method: :post do %>
                   <button class="item_button"><%= item.name %></button>
                 <% end %>
               <% end %>
@@ -21,10 +21,10 @@
   </div>
 
   <div class="list_area_imput-form">
-      <%= form_for(@item) do |f| %>
-        <%= f.text_field :name, class:"", size:30, placeholder:"メモ" %>
-        <%= f.submit "追加" %>
-      <% end %>
+    <%= form_for [@group,@item], url: group_items_path do |f| %>
+      <%= f.text_field :name, class:"", size:30, placeholder:"メモ" %>
+      <%= f.submit "追加" %>
+    <% end %>
   </div>
 
 </div>

@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to "/items", notice: "グループを作成しました"
+      redirect_to "/groups"
     else
       render :new
     end

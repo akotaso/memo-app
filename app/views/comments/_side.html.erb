@@ -15,14 +15,10 @@
       <div class="comment_area">
         <div class="comment_area_box">
           
-        <%# <%= render @comment  %> 
-        <%= render partial: 'comment',locals: { comment: @comment }, collection: @comments %>
+          <div>
+            <%= render partial: 'comment',locals: { comment: @comment }, collection: @comments %>
+          </div>
 
-          <%# <% @comments.each do |comment| %>
-            <%# <div class="comment_area_box_comment"> %>
-            <%# <%= comment.content %>
-            <%# </div> %>
-          <%# <% end %>
         </div>
       </div>
 

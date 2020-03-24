@@ -1,11 +1,10 @@
 class ItemsController < ApplicationController
-  before_action :set_group, only: [:index, :new, :create, :destroy]
+  before_action :set_group
 
   def index
-    @items = Item.all
+    @items = @group.items.includes(:user)
     @item = Item.new
     @comments = @group.comments.includes(:user)
-    # @comments = Comment.all
     @comment = Comment.new
     redirect_to "/users/sign_up" unless user_signed_in?
   end
@@ -17,9 +16,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-      @item = Item.create(item_params)
+      @item = @group.items.new(item_params)
       @item.save
-      redirect_to "/items"
+      redirect_to  group_comments_path(@group)
   end
 
   def destroy
@@ -36,7 +35,7 @@ class ItemsController < ApplicationController
   end
 
   def set_group
-    @group = Group.find(params[:id])
+    @group = Group.find(params[:group_id])
   end
 
 end
