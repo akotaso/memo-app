@@ -1,24 +1,19 @@
 .comment {
-  height: 100%;
-  width: 100%;
-  display: flex;
+  height: calc(100vh - 114px);
+  width: 30%;
+
 }
 
 .group_area {
-  height: calc(100vh - 114px);
-  width: 30%;
+  height: 8%;
 }
 
-.group_area_content {
-  height: 10%;
+.group_area h2 {
+  padding-left: 20px;
 }
 
 .comment_area {
-  height: calc(100% - 20%);
-}
-
-.comment_area_box {
-  margin: 0 10px 0 10px;
+  height: calc(100% - 18.1%);
 }
 
 .comment_area_box_comment{
@@ -28,7 +23,7 @@
 
 .comment_area_message-form {
   background-color: #FAEBD7;
-  height: calc( 100% - 90%);
+  height: 10.5%;
 }
 
 .comment_form {
@@ -36,16 +31,18 @@
   margin-left: 80px;
 }
 
-.group_area_list {
-  display: flex;
-}
-
 .group_area_name {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
   color: #A52A2A;
-  margin-left: 10px;
+  margin-left: 30px;
   padding-right: 15px;
   text-shadow: 1px 1px 1px pink;
+}
+
+.comments_status {
+  text-align: right;
+  font-size: 12px;
+  color: gray;
 }

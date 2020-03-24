@@ -20,19 +20,16 @@
 
     <div class="menu_area">
       <div class="menu_list">
-        <button class="ui-toggle-06" onclick="location.href='/items'">Item</button>
-        <button class="ui-toggle-06" onclick="location.href='/items/:id'">About</button>
+        <button class="ui-toggle-06" onclick="location.href='/omikuji'">About</button>
         <button class="ui-toggle-06" onclick="location.href='/groups'">Group</button>
         <button class="ui-toggle-06" onclick="location.href='/users/:id'">User</button>
       </div>
-    </div>
-
-    <div class="content_area">
-    <%= yield %>
     </div>
     <div class="footer">
       <p class="copyright">©︎ akotaso 2020</p>
     </div>
 
+    <%= yield %>
+  
   </body>
 </html>

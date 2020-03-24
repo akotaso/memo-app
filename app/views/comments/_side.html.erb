@@ -1,31 +1,23 @@
-  <div class="comment">
-      <div class="group_area">
-        <div class="group_area_content">
-          <h2>グループ：</h2>
-          <% current_user.groups.each do |group| %>
-          <div class="group_area_list">
-            <%= link_to group_comments_path(group) do %>
-              <div class="group_area_name"><%= group.name %></div>
-            <% end %>
+<div class="comment">
+    <div class="group_area">
+      <div class="group_area_content">
+        <h2>Group:</h2>
+        <div class="group_area_list">
+          <%= link_to groups_path(@group) do %>
+          <div class="group_area_name"><%= @group.name %></div>
           <% end %>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div class="comment_area">
-        <div class="comment_area_box">
-          
-          <div>
-            <%= render partial: 'comment',locals: { comment: @comment }, collection: @comments %>
-          </div>
+    <div class="comment_area">
+      <%= render partial: 'comment',locals: { comment: @comment }, collection: @comments %>
+    </div>
 
-        </div>
-      </div>
-
-      <div class="comment_area_message-form">
-        <%= form_for [@group,@comment], url: group_comments_path do |f| %>
-          <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
-          <%= f.submit "送信" %>
-        <% end %>
-      </div>
+  <div class="comment_area_message-form">
+    <%= form_for [@group,@comment], url: group_comments_path do |f| %>
+      <%= f.text_field :content, class:"comment_form", size:30, placeholder:"メッセージ" %>
+      <%= f.submit "送信" %>
+    <% end %>
   </div>
+</div>
