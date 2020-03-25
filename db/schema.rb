@@ -50,11 +50,11 @@ ActiveRecord::Schema.define(version: 20200126062408) do
 
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "item_id"
-    t.integer  "user_id"
+    t.integer  "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_likes_on_group_id", using: :btree
     t.index ["item_id"], name: "index_likes_on_item_id", using: :btree
-    t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
   create_table "omikujis", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -81,6 +81,6 @@ ActiveRecord::Schema.define(version: 20200126062408) do
   add_foreign_key "group_users", "users"
   add_foreign_key "items", "groups"
   add_foreign_key "items", "users"
+  add_foreign_key "likes", "groups"
   add_foreign_key "likes", "items"
-  add_foreign_key "likes", "users"
 end

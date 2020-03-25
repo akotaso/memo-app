@@ -33,7 +33,7 @@ h2 {
   display: inline-block;
 }
 
-.item_button {
+.item_button_not-liked {
   font-size: 16px;
   margin-top: 20px;
   margin-left: 15px;
@@ -42,6 +42,20 @@ h2 {
   border: 2px solid rgb(172, 135, 135);
   border-radius: 3em .5em 2em .5em/.4em 2em .5em 3em;
   color: #333;
+  text-decoration: none;
+  text-align: center;
+}
+
+.item_button_liked {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 15px;
+  display: inline-block;
+  padding: .60em 2em;
+  border: 2px solid rgb(172, 135, 135);
+  border-radius: 3em .5em 2em .5em/.4em 2em .5em 3em;
+  color: white;
+  background-color: rgb(206, 94, 90);
   text-decoration: none;
   text-align: center;
 }

@@ -3,13 +3,13 @@
       <div class=list_area_item>
         <% @items.each do |item| %>
           <div class="list_area_item-list">
-            <% if current_user.already_liked?(item) %>
-              <%= link_to group_item_like_path(item_id: item.id, id: item.likes.find_by(user_id: current_user.id)), method: :delete do %>
-              <button class="item_button"><%= item.name %></button>
+            <% if @group.already_liked?(item) %>
+              <%= link_to group_item_like_path(item_id: item.id, id: item.likes.find_by(group_id: @group.id)), method: :delete do %>
+              <button class="item_button_liked" id= "<%= item.id %>"><%= item.name %></button>
               <% end %>
             <% else %>
               <%= link_to group_item_likes_path(item_id: item.id), method: :post do %>
-              <button class="item_button"><%= item.name %></button>
+              <button class="item_button_not-liked" id= "<%= item.id %>"><%= item.name %></button>
               <% end %>
             <% end %>
           </div>

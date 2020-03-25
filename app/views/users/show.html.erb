@@ -4,9 +4,7 @@
       <div class="userName">
       こんにちは<%= current_user.name %>さん<br>
       </div>
-      <div class="other_login">
-      ログアウトは<%= link_to "コチラ", destroy_user_session_path, method: :delete %>
-      </div>
+      <u><p><%= link_to "ログアウトはコチラ", destroy_user_session_path, {method: :delete, class: "other_login"} %></p></u>
     <% else %>
       <div class="userName">
       ようこそゲストさん<br>
