@@ -1,6 +1,7 @@
 .group  {
   text-align: center;
   height: calc(100vh - 114px);
+  overflow: scroll;
 }
 
 .group h2 {
@@ -17,18 +18,34 @@
 }
 
 .group_name {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
-}
-
-.group_name p {
   color: #A52A2A;
+
 }
 
 .group_member {
+  margin-top: 10px;
   margin-left: 10px;
 }
 
 .group_edit {
-  margin-top: 30px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.group_list p {
+  color: #A52A2A;
+  text-decoration: none;
+}
+
+.group_link {
+  display: flex;
+  margin-left: 46%;
+}
+
+.group_edit_link {
+  margin-top: 10px;
+  font-size: 12px;
+  padding-right: 20px;
 }

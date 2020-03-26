@@ -1,23 +1,31 @@
 <div class="group">
   <div class="my_group">
     <h2>グループ</h2>
+
+  <div class="group_edit">
+    <a href="/groups/new", class="other_login"><u><p>新規作成はコチラ</p></u></a><br>
+  </div>
+
     <% current_user.groups.each do |group| %>
     <div class="group_list">
       <div class="group_name">
         <%= link_to group_comments_path(group) do %>
-        <u><p><%= group.name %></p></u>
+        <p><%= group.name %></p>
         <% end %>
       </div>
       <p class="group_member">メンバー：</p>
       <% group.users.each do |user|%>
       <%= user.name %>
       <% end %>
+      <div class="group_link">
+        <%= link_to edit_group_path(group) do %>
+        <p class="group_edit_link"><u>編集する</u></p>
+        <% end %>
+        <%= link_to group_path(group), method: :delete, data: {confirm: "グループ『#{group.name}』を削除しますか？"} do %>
+        <p class="group_edit_link"><u>削除する</u></p>
+        <% end %>
+      </div>
     </div><br>
     <% end %>
   </div>
-
-  <div class="group_edit">
-    <a href="/groups/new", class="other_login"><u><p>新規作成はコチラ</p></u></a><br>
-  </div>
-
 </div>

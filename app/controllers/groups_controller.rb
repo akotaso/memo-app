@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to "/groups"
+      redirect_to 
     else
       render :new
     end
@@ -25,7 +25,11 @@ class GroupsController < ApplicationController
   end
 
   def update
-    
+    if @group.update(group_params)
+      redirect_to "/groups"
+    else
+      render :edit
+    end
   end
 
   def destroy

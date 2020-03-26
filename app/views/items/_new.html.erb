@@ -6,7 +6,7 @@
             <% if @group.already_liked?(item) %>
               <%= link_to group_item_like_path(item_id: item.id, id: item.likes.find_by(group_id: @group.id)), method: :delete do %>
               <button class="item_button_liked" id= "<%= item.id %>"><%= item.name %></button>
-                <%= link_to group_item_path(group_id: @group.id, id: item.id), method: :delete do %>
+                <%= link_to group_item_path(group_id: @group.id, id: item.id), method: :delete, data: {confirm: "アイテム『#{item.name}』を削除しますか？"} do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>
               <% end %>
