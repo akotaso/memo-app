@@ -14,6 +14,12 @@ class CommentsController < ApplicationController
     redirect_to group_comments_path(@group)
   end
 
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    redirect_to group_comments_path(@group)
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:content).merge(user_id: current_user.id)
