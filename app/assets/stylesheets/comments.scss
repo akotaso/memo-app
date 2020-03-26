@@ -12,6 +12,10 @@
   padding-left: 20px;
 }
 
+.group_area_list {
+  display: flex;
+}
+
 .comment_area {
   height: calc(100% - 18.1%);
   overflow: scroll;
@@ -40,6 +44,14 @@
   margin-left: 30px;
   padding-right: 15px;
   text-shadow: 1px 1px 1px pink;
+}
+
+.group_area_list i {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #A52A2A;
+  margin-right: 0;
 }
 
 .comments_status {

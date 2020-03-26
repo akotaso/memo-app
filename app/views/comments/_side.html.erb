@@ -4,7 +4,10 @@
         <h2>Group:</h2>
         <div class="group_area_list">
           <%= link_to groups_path(@group) do %>
-          <div class="group_area_name"><%= @group.name %></div>
+            <div class="group_area_name"><%= @group.name %></div>
+          <% end %>
+          <%= link_to group_path(id: @group.id), method: :delete, data: {confirm: "グループ『#{@group.name}』を削除しますか？"} do %>
+            <i class="fas fa-trash-alt"></i>
           <% end %>
         </div>
       </div>

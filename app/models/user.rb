@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :items, dependent: :destroy
 
-  has_many :group_users
+  has_many :group_users, dependent: :destroy
   has_many :groups, through: :group_users
 
   

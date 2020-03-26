@@ -5,8 +5,9 @@
 
 .list_area {
   height: 90%;
-  width: calc(100% - 30%);
+  width: 100%;
   border-left: solid 1px rgb(218, 197, 197);
+  overflow: scroll;
 }
 
 .list_area_imput-form {

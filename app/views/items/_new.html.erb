@@ -13,7 +13,7 @@
             <% else %>
               <%= link_to group_item_likes_path(item_id: item.id), method: :post do %>
               <button class="item_button_not-liked" id= "<%= item.id %>"><%= item.name %></button>
-                <%= link_to group_item_path(group_id: @group.id, id: item.id), method: :delete do %>
+                <%= link_to group_item_path(group_id: @group.id, id: item.id), method: :delete, data: {confirm: "アイテム『#{item.name}』を削除しますか？"} do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>
               <% end %>
