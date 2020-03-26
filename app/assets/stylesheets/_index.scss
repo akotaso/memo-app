@@ -91,9 +91,25 @@
 }
 
 .about {
+  height: calc(100vh - 114px);
   text-align: center;
+  overflow: scroll;
+}
+
+.description {
+  margin-bottom: 100px;
 }
 
 .about a {
   color: #A52A2A;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+}
+
+.about h3 {
+  color: #A52A2A;
+  font-weight: bold;
+  margin-top: 5px;
 }
