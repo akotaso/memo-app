@@ -31,6 +31,7 @@ h2 {
 
 .list_area_item-list {
   display: inline-block;
+  position: relative;
 }
 
 .item_button_not-liked {
@@ -58,4 +59,17 @@ h2 {
   background-color: rgb(206, 94, 90);
   text-decoration: none;
   text-align: center;
+}
+
+.list_area_item-list i {
+  position: absolute;
+  top: -1000px;
+  color: #A52A2A;
+}
+
+.list_area_item-list:hover i {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
