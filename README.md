@@ -1,24 +1,11 @@
-# README
+# EasyTags
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
 
-Things you may want to cover:
+# このアプリを作ろうと思ったきっかけ
 
-* Ruby version
+# 機能
 
-* System dependencies
+# アップデートについて
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# DB設計
