@@ -2,16 +2,19 @@
   <h2>グループ作成</h2>
   <%= form_for @group, id: 'new_group', class: 'new_group', local: true do |f| %>
 
-  <div class="group_form_name">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <p>追加したいメンバーにチェックを入れてください</p>
-  <div class="group_form_member">
-    <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
-  </div>
+
+    <div class="group_form_name">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
 
   <div class="group_form_member-list">
+
+    <p>追加したいメンバーにチェックを入れてください</p>
+    <div class="group_form_member">
+      <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
+    </div>
+
   </div>
 
   <div class="actions">
