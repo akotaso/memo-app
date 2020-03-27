@@ -92,7 +92,6 @@
 
 .about {
   height: calc(100vh - 114px);
-  text-align: center;
   overflow: scroll;
 }
 
@@ -100,16 +99,29 @@
   margin-bottom: 100px;
 }
 
+.description p {
+  margin-left: 350px;
+}
+
 .about a {
   color: #A52A2A;
 }
 
+.about h1 {
+  margin-left: 300px;
+  text-shadow: 1px 2px 1px rgb(212, 181, 181);
+}
+
 .about h2 {
-  margin-bottom: 15px;
+  margin-left: 330px;
 }
 
 .about h3 {
   color: #A52A2A;
   font-weight: bold;
   margin-top: 5px;
+}
+
+.inflection {
+  margin-left: 50px;
 }

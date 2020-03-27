@@ -10,10 +10,10 @@
     <div class="group_list">
       <div class="group_name">
         <%= link_to group_comments_path(group) do %>
-        <p><%= group.name %></p>
+        <button><%= group.name %></button>
         <% end %>
       </div>
-      <p class="group_member">メンバー：</p>
+      <p class="group_member"><b>メンバー：</b></p>
       <% group.users.each do |user|%>
       <%= user.name %>
       <% end %>

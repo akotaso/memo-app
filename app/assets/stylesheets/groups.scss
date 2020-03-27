@@ -1,10 +1,11 @@
 .group  {
-  text-align: center;
   height: calc(100vh - 114px);
   overflow: scroll;
 }
 
 .group h2 {
+  text-shadow: 1px 2px 1px rgb(212, 181, 181);
+  text-align: center;
   font-size: 22px;
   padding: 50px 0 30px 0;
 }
@@ -21,17 +22,41 @@
   font-size: 22px;
   font-weight: bold;
   color: #A52A2A;
+}
 
+.group_name button {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 2px 2px 3px 1px rgb(173, 135, 135);
+  border-style: none;
+  border-radius: 3px;
+  padding: 5px 15px;
+  background-color: #A52A2A;
+  color: white;
+  opacity: 0.9;
+}
+
+.group_name button:hover {
+  background-color: rgb(212, 130, 130);
 }
 
 .group_member {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
 }
 
 .group_edit {
   margin-top: 10px;
   font-size: 18px;
+}
+
+.group_list {
+  border: solid 1px #A52A2A;
+  border-radius: 10px;
+  width: 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
 }
 
 .group_list p {
@@ -41,7 +66,7 @@
 
 .group_link {
   display: flex;
-  margin-left: 46%;
+  margin-left: 70%;
 }
 
 .group_edit_link {

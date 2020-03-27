@@ -4,16 +4,24 @@
       <div class="userName">
       こんにちは<%= current_user.name %>さん<br>
       </div>
-      <u><p><%= link_to "ログアウトはコチラ", destroy_user_session_path, {method: :delete, class: "other_login"} %></p></u><br>
-      <u><p><%= link_to "アカウント削除はコチラ", user_registration_path, {method: :delete, class: "other_login", data: {confirm: "アカウント『#{current_user.name}』を削除しますか？"}} %></p></u>
+      <p>GroupメニューからGroupを作成し、メモ管理画面へいきましょう！</p>
+      <br>
+      <p>詳しい説明はAboutメニューをご覧ください</p><br><br><br>
+      <div class="signUp">
+        <u><%= link_to "ログアウトはコチラ", destroy_user_session_path, {method: :delete, class: "other_login"} %></u><br><br>
+        <u><%= link_to "アカウント削除はコチラ", user_registration_path, {method: :delete, class: "other_login", data: {confirm: "アカウント『#{current_user.name}』を削除しますか？"}} %></u>
+      </div>
     <% else %>
       <div class="userName">
       ようこそゲストさん<br>
       </div>
       <p>EasyTagの機能を使うためにまずはユーザー登録をしましょう！</p><br>
       <div class="signUp">
-      <a href="/users/sign_up", class="other_login"><u><p>新規登録はコチラ</p></u></a><br>
-      <a href="/users/sign_in", class="other_login"><u><p>ログインはコチラ</p></u></a>
+        <a href="/users/sign_up", class="other_login"><u>新規登録はコチラ</u></a><br><br><br><br>
+      </div>
+        <p>アカウントをお持ちの方はリンクからログインしてください</p><br>
+      <div class="signUp">
+        <a href="/users/sign_in", class="other_login"><u>ログインはコチラ</u></a>
       </div>
     <% end %>
   </div>

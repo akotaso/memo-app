@@ -2,6 +2,11 @@ a {
   text-decoration: none;
 }
 
+.contents_content {
+  height: calc(100vh - 114px);
+  overflow: scroll;
+}
+
 .container {
   width: 400px;
   margin: 0 auto;
@@ -51,13 +56,15 @@ a {
 
 .userName {
   color: #A52A2A;
+  text-shadow: 1px 2px 1px rgb(212, 181, 181);
   font-size: 22px;
   font-weight: bold;
   padding: 50px 0 50px 0;
+  margin-top: 30px;
 }
 
 .user_info {
-  text-align: center;
+  margin-left: 30%;
 }
 
 .user_info p {
@@ -65,6 +72,5 @@ a {
 }
 
 .signUp {
-  margin-top: 50px;
+  font-size: 18px;
 }
-

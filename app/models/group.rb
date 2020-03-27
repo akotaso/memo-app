@@ -1,7 +1,7 @@
 class Group < ApplicationRecord
   has_many :group_users,dependent: :destroy
   has_many :users, through: :group_users
-  has_many :comments
+  has_many :comments,dependent: :destroy
   has_many :items
 
   has_many :likes, dependent: :destroy

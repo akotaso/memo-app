@@ -1,36 +1,38 @@
 <div class="contents row">
-  <div class="container">
-    <h2>新規ユーザー登録</h2>
-    <%= form_for (@user), url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%= devise_error_messages! %>
+  <div class="contents_content">
+    <div class="container">
+      <h2>新規ユーザー登録</h2>
+      <%= form_for (@user), url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+        <%= devise_error_messages! %>
 
-      <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, placeholder: "名前を入力してください",autofocus: true, maxlength: "6" , size: 20%>
-      </div>
+        <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, placeholder: "名前を入力してください",autofocus: true, maxlength: "6" , size: 20%>
+        </div>
 
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してください"%>
-      </div>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, placeholder: "メールアドレスを入力してください"%>
+        </div>
 
-      <div class="field">
-        <%= f.label :password %>
-        <% if @validatable %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, placeholder: "パスワードを入力してください",autocomplete: "off" %>
-      </div>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @validatable %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, placeholder: "パスワードを入力してください",autocomplete: "off" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, placeholder: "確認のため再度パスワードを入力してください",autocomplete: "off" %>
-      </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, placeholder: "確認のため再度パスワードを入力してください",autocomplete: "off" %>
+        </div>
 
-      <div class="actions">
-        <%= f.submit "登録" %>
-      </div>
-    <% end %>
-    <a href="/users/sign_in", class="other_login"><p>ログインはこちら</p></a>
+        <div class="actions">
+          <%= f.submit "登録" %>
+        </div>
+      <% end %>
+      <a href="/users/sign_in", class="other_login"><p>ログインはこちら</p></a>
+    </div>
   </div>
 </div>
