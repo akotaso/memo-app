@@ -1,0 +1,66 @@
+.index {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.background-img {
+  height: 550px;
+  width: 50%;
+  margin: 0 auto;
+  background-image: image-url("lightbulb-2692247_640.jpg");
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+}
+
+.index h1 {
+  font-size: 80px;
+  font-family: serif;
+  margin-left: 140px;
+}
+
+.index h2 {
+  font-size: 30px;
+  font-family: "ＭＳ 明朝",serif;
+  margin-left: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.index span{
+  font-size: 25px;
+  padding: 5px;
+  background-color: #A52A2A;
+  border-radius: 3px;
+  color: white;
+  opacity: 0.9;
+}
+
+.index ul {
+  margin-bottom: 20px;
+}
+
+.index-explain {
+  margin-left: 120px;
+}
+
+.index button {
+  margin-top: 35px;
+  margin-left: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 2px 2px 3px 1px rgb(173, 135, 135);
+  border-style: none;
+  border-radius: 3px;
+  padding: 5px 15px;
+  background-color: #A52A2A;
+  color: white;
+  opacity: 0.9;
+}
+
+.index button:hover {
+  background-color: rgb(212, 130, 130);
+}
