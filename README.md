@@ -1,7 +1,7 @@
 # EasyTag
-![EasyTag-index](https://user-images.githubusercontent.com/59213808/77808660-99da8e80-70cf-11ea-8c33-c01757959cc8.jpg)
 
 # 概要
+![EasyTag-index](https://user-images.githubusercontent.com/59213808/77808660-99da8e80-70cf-11ea-8c33-c01757959cc8.jpg)
 
 # 制作背景
 世の中を（少しでも）便利にするアプリを作ろうと考え、まず<b>「解決したい問題」</b>は何か探してみました。<br>
@@ -22,7 +22,7 @@
 <br>
 エピソードに感動した私は、この<b>「主婦の知恵」</b>を搭載したアプリを作れば<b>「不便」も改善できる</b>と思い制作に取り掛かりました。
 
-# 機能
+# DEMO
 
 # アップデートについて
 EasyTagをもっと便利にご利用いただくために、次の機能を実装したいと考えております。<br>
