@@ -1,6 +1,8 @@
 # EasyTag
 
 # 概要
+好きなメンバーでグループをつくり共有できるメモアプリ！<br>
+コメントも残すことが出来ます！
 ![EasyTag-index](https://user-images.githubusercontent.com/59213808/77808660-99da8e80-70cf-11ea-8c33-c01757959cc8.jpg)
 
 # 制作背景
