@@ -32,3 +32,67 @@ EasyTagをもっと便利にご利用いただくために、次の機能を実�
 他、レイアウトや細部のブラッシュアップなど日頃より改善していきます。
 
 # DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+### Association
+- has_many :comments, dependent: :destroy
+- has_many :items, dependent: :destroy
+- has_many :group_users, dependent: :destroy
+- has_many :groups, through: :group_users
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|name|index|unique: true|
+### Association
+- has_many :group_users,dependent: :destroy
+- has_many :users, through: :group_users
+- has_many :comments,dependent: :destroy
+- has_many :items
+- has_many :likes, dependent: :destroy
+- has_many :liked_items, through: :likes, source: :item
+
+## group_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group|references|foreign_key: true|
+|user|references|foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|string|-----|
+|group|references|foreign_key: true|
+|user|references|foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## itemsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|-----|
+|group|references|foreign_key: true|
+|user|references|foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+- has_many :likes, dependent: :destroy
+- has_many :liked_groups, through: :likes, source: :group
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group|references|foreign_key: true|
+|item|references|foreign_key: true|
+### Association
+- belongs_to :item
+- belongs_to :group
