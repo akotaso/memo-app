@@ -1,6 +1,9 @@
 server '13.112.145.233', user: 'akotaso', roles: %w{app db web}
 
-ssh_options: {
+set :rails_env, :production
+set :unicorn_rack_env, "production"
+
+set :ssh_options, {
   port: 22,
   user: "akotaso", # overrides user setting above
   keys: %w(~/.ssh/easyTag_key_rsa),
