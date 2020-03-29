@@ -53,3 +53,4 @@ production:
   username: akotaso
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
+  host: easytag-mysql.ccezklzo3df8.ap-northeast-1.rds.amazonaws.com
