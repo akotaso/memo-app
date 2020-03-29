@@ -3,14 +3,6 @@ server '13.112.145.233', user: 'akotaso', roles: %w{app db web}
 set :rails_env, :production
 set :unicorn_rack_env, "production"
 
-set :ssh_options, {
-  port: 22,
-  user: "akotaso", # overrides user setting above
-  keys: %w(~/.ssh/easyTag_key_rsa),
-  forward_agent: true
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-}
 
 # server-based syntax
 # ======================
