@@ -40,7 +40,7 @@ EasyTagをもっと便利にご利用いただくために、次の機能を実�
 他、レイアウトや細部のブラッシュアップなど日頃より改善していきます。
 
 ## 使用
-Ruby on Rails,AWS(VPC/EC2/Route53/RDS),Unicoorn,nginx,Capistrano
+HTML,CSS,Ruby on Rails,AWS(VPC/EC2/Route53/RDS),Unicoorn,nginx,Capistrano
 
 ## DB設計
 ### usersテーブル
