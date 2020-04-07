@@ -12,6 +12,8 @@
 
     <input id="group_form_member-search", placeholder="追加したいユーザー名を入力してください" >
 
+  <div id="group_form_member-search-result"></div>
+
     <p>追加したいメンバーにチェックを入れてください</p>
     <div class="group_form_member">
       <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
