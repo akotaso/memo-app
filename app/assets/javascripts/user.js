@@ -3,7 +3,7 @@ $(function(){
     var html= `
       <div class="group_form_member-incri clearfix">
         <p class="group_form_member-incriName">${user.name}</p>
-        <div class="addUserButton chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
+        <div class="addUserButton" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
       </div>
     `;
     $("#group_form_member-search-result").append(html);
@@ -20,11 +20,11 @@ $(function(){
 
   function addDeleteUser(name,id) {
     var html = `
-    <div class="chat-group-user clearfix" id="${id}">
-      <p class="chat-group-user__name">${name}</p>
-      <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">削除</div>
+    <div class="add-groupUser__id clearfix" id="${id}">
+      <p class="add-groupUser__name">${name}</p>
+      <div class="removeUserButton" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>`;
-    $(".js-add-user").append(html);
+    $(".add-groupUser").append(html);
   }
 
   function addMember(userId) {
@@ -57,7 +57,7 @@ $(function(){
       });
   });
 
-  $(document).on('click', '.chat-group-user__btn--add', function(){
+  $(document).on('click', '.addUserButton', function(){
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
@@ -66,7 +66,7 @@ $(function(){
     addDeleteUser(userName,userId);
     addMember(userId);
   });
-  $(document).on('click','.chat-group-user__btn--remove', function(){
+  $(document).on('click','.removeUserButton', function(){
     $(this)
       .parent()
       .remove();
