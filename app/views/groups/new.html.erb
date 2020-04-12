@@ -4,18 +4,23 @@
 
 
     <div class="group_form_name">
-      <%= f.label :name %><br />
+      <%= f.label :"グループ名を入力してください" %><br />
       <%= f.text_field :name %>
     </div>
 
   <div class="group_form_member-list">
-
-    <input id="group_form_member-search", placeholder="追加したいユーザー名を入力してください" >
+    <p>追加したいユーザー名を入力してください</p>
+    <input id="group_form_member-search">
 
   <div id="group_form_member-search-result"></div>
 
-  <div class="add-groupUser"></div>
+  <div id="groupUser.js-add-user"></div>
 
+  <div class="current_group-member"><br>
+    <p>グループメンバー</p>
+
+    <br>
+    <br>
     <p>追加したいメンバーにチェックを入れてください</p>
     <div class="group_form_member">
       <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>

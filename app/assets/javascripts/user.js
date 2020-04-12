@@ -24,7 +24,7 @@ $(function(){
       <p class="add-groupUser__name">${name}</p>
       <div class="removeUserButton" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>`;
-    $(".add-groupUser").append(html);
+    $(".js-add-user").append(html);
   }
 
   function addMember(userId) {
