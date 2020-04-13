@@ -1,7 +1,7 @@
 $(function(){
   function addUser(user){
     var html= `
-      <div class="group_form_member-incri clearfix">
+      <div class="group_form_member-incri">
         <p class="group_form_member-incriName">${user.name}</p>
         <div class="addUserButton" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
       </div>
@@ -11,7 +11,7 @@ $(function(){
 
   function addNoUser(){
     var html = `
-      <div class="group_form_member-incri clearfix">
+      <div class="group_form_member-incri">
         <p class="group_form_member-incriName">ユーザーが見つかりません</p>
       </div>
     `;
@@ -20,7 +20,7 @@ $(function(){
 
   function addDeleteUser(name,id) {
     var html = `
-    <div class="add-groupUser__id clearfix" id="${id}">
+    <div class="add-groupUser__id" id="${id}">
       <p class="add-groupUser__name">${name}</p>
       <div class="removeUserButton" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>`;

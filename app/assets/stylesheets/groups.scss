@@ -19,10 +19,6 @@
   padding: 10px 0 20px 0;
 }
 
-.group_form_member-list {
-  margin-left: 30%;
-}
-
 .group_name {
   font-size: 22px;
   font-weight: bold;
@@ -80,9 +76,6 @@
   padding-right: 20px;
 }
 
-#new_group {
-}
-
 .actions {
   padding-top: 20px;
   text-align: center;
@@ -104,4 +97,8 @@
 
 .add-groupUser__name {
   margin-right: 30px;
+}
+
+.group_form_member-list {
+  text-align: center;
 }
