@@ -4,7 +4,7 @@ $(function(){
       <div class="group_form_member-incri">
         <p class="group_form_member-incriName">${user.name}</p>
         <div class="addUserButton" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
-      </div>
+      </div><br>
     `;
     $("#group_form_member-search-result").append(html);
   }
@@ -23,7 +23,7 @@ $(function(){
     <div class="add-groupUser__id" id="${id}">
       <p class="add-groupUser__name">${name}</p>
       <div class="removeUserButton" data-user-id="${id}" data-user-name="${name}">削除</div>
-    </div>`;
+    </div><br> `;
     $(".js-add-user").append(html);
   }
 

@@ -77,28 +77,38 @@
 }
 
 .actions {
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: center;
 }
 
 .group_form_member-incri {
-  display: flex;
+  display: inline-flex;
   margin-top: 15px;
 }
 
 .group_form_member-incriName {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .add-groupUser__id {
-  display: flex;
+  display: inline-flex;
   margin-top: 15px;
 }
 
 .add-groupUser__name {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .group_form_member-list {
   text-align: center;
+}
+
+.addUserButton {
+  color: #A52A2A;
+  font-weight: bold;
+}
+
+.removeUserButton {
+  color: #A52A2A;
+  font-weight: bold;
 }
