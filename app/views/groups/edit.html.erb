@@ -6,12 +6,37 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <p>追加したいメンバーにチェックを入れてください</p>
-  <div class="group_form_member">
-    <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
-  </div>
+
 
   <div class="group_form_member-list">
+    <p>追加したいユーザー名を入力してください</p>
+    <input id="group_form_member-search">
+
+    <div id="group_form_member-search-result"></div>
+
+
+    <div class="current_group-member"><br>
+      <p><u>グループメンバー</u></p><br>
+        <input name="group[user_ids][]" type="hidden" value="<%= current_user.id %>" >
+        <p class=""><%= current_user.name %></p>
+
+        <% @group.users.each do |user| %>
+          <% if current_user.name != user.name %>
+            <div class="add-groupUser__id">
+              <input name="group[user_ids][]" type="hidden" value="<%= user.id %>" >
+              <p class="add-groupUser__name"><%= user.name %></p>
+              <div class="removeUserButton" data-user-id="<%= user.id %>" data-user-name="<%= user.name %>">削除</div>
+            </div><br>
+          <% end %>
+        <% end %>
+
+
+
+
+
+        <div class="js-add-user"></div>
+    </div>
+
   </div>
 
   <div class="actions">
